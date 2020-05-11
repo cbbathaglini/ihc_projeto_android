@@ -25,6 +25,7 @@
         <activity android:name=".Exercicio3Tela1Activity" />
         <activity android:name=".Exercicio3Tela2Activity" />
         <activity android:name=".Exercicio4Activity" />
+        <activity android:name=".Exercicio5Activity" />
         <activity android:name=".GPSTracker" />
 
     </application>

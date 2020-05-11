@@ -48,4 +48,21 @@
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="351dp" />
 
+    <Button
+        android:id="@+id/button_exercicio5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 05 - GIROSCÓPIO"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+
+    <Button
+        android:id="@+id/button_exercicio6_GPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 06 - GPS"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="351dp" />
+
 </LinearLayout>

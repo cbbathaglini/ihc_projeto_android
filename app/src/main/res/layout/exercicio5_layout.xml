@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <TextView
+        android:id="@+id/textViewXG"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="X:" />
+
+    <EditText
+        android:id="@+id/editText_eixoXG"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewYG"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="Y:" />
+
+    <EditText
+        android:id="@+id/editText_eixoYG"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text=""
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewZG"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="Z:" />
+    <EditText
+        android:id="@+id/editText_eixoZG"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+
+</LinearLayout>

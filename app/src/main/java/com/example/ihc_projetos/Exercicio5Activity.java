@@ -8,16 +8,14 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Exercicio3Tela1Activity extends AppCompatActivity {
+public class Exercicio5Activity extends AppCompatActivity {
 
     SensorManager sensor_manager;
-    Sensor sensor_acelerometro;
+    Sensor sensor_giroscopio;
 
     EditText edt_eixo_X;
     EditText edt_eixo_Y;
@@ -29,18 +27,18 @@ public class Exercicio3Tela1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exercicio3_tela1_layout);
+        setContentView(R.layout.exercicio5_layout);
 
-        edt_eixo_X = findViewById(R.id.editText_eixoX);
-        edt_eixo_Y = findViewById(R.id.editText_eixoY);
-        edt_eixo_Z = findViewById(R.id.editText_eixoZ);
+        edt_eixo_X = findViewById(R.id.editText_eixoXG);
+        edt_eixo_Y = findViewById(R.id.editText_eixoYG);
+        edt_eixo_Z = findViewById(R.id.editText_eixoZG);
 
 
         context = this.getApplicationContext();
         sensor_manager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        sensor_acelerometro = sensor_manager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        sensor_giroscopio = sensor_manager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
-        if(sensor_acelerometro != null){
+        if(sensor_giroscopio != null){
             sensor_manager.registerListener(new SensorEventListener() {
                 @Override
                 public void onSensorChanged(SensorEvent event) {
@@ -53,19 +51,13 @@ public class Exercicio3Tela1Activity extends AppCompatActivity {
                     edt_eixo_Y.setText(Float.toString(y));
                     edt_eixo_Z.setText(Float.toString(z));
 
-                    if(x > 1.0){
-                        System.out.println("valor x:" + x);
-                        Intent intent = new Intent(context,Exercicio3Tela2Activity.class);
-                        intent.putExtra("textoEnviado","POSIÇÃO CORRETA");
-                        startActivity(intent);
-                    }
                 }
 
                 @Override
                 public void onAccuracyChanged(Sensor sensor, int accuracy) {
                     Log.d("DominandoAndroid", "Precisão mudou");
                 }
-            },sensor_acelerometro, SensorManager.SENSOR_DELAY_NORMAL);
+            },sensor_giroscopio, SensorManager.SENSOR_DELAY_NORMAL);
         }
 
     }

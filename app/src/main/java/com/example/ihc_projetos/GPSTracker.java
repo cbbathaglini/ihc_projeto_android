@@ -15,38 +15,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-public class GPSTracker  extends AppCompatActivity{//} implements LocationListener {
+public class GPSTracker extends AppCompatActivity implements LocationListener {
     Context context;
 
     Button btn_gps;
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        //setContentView(R.layout.);
 
-
-        ActivityCompat.requestPermissions(GPSTracker.this, new
-                String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
-        btn_gps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                GPSTracker g = new GPSTracker(getApplicationContext());
-                Location l = g.getLocation();
-                if (l != null) {
-                    double lat = l.getLatitude();
-                    double longi = l.getLongitude();
-                    Toast.makeText(getApplicationContext(), "LAT: " + lat + "LONG: " +
-                            longi, Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+    public GPSTracker() {
     }
 
-
-
-    public GPSTracker(Context c)
-    {
-        context = c;
+    public GPSTracker(Context context) {
+        this.context = context;
     }
 
     public Location getLocation(){
@@ -89,4 +68,31 @@ public class GPSTracker  extends AppCompatActivity{//} implements LocationListen
     public void onProviderDisabled(String provider) {
 
     }
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.gps_tracker_layout);
+
+        context = this.getApplicationContext();
+
+        System.out.println("aqui estou");
+        ActivityCompat.requestPermissions(GPSTracker.this, new
+                String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 123);
+        btn_gps= findViewById(R.id.getGPSBtn);
+        btn_gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GPSTracker g = new GPSTracker(context);
+                Location l = g.getLocation();
+                if (l != null) {
+                    double lat = l.getLatitude();
+                    double longi = l.getLongitude();
+                    Toast.makeText(getApplicationContext(), "LAT: " + lat + "LONG: " +
+                            longi, Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
+
+
 }
