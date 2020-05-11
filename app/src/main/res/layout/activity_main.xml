@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="IHC 2020.01 " />
+
+    <Button
+        android:id="@+id/button_exercicio1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 01"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="200dp" />
+
+    <Button
+        android:id="@+id/button_exercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 02"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="128dp" />
+
+    <Button
+        android:id="@+id/button_exercicio3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 03 - ACELEROMETRO"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <Button
+        android:id="@+id/button_exercicio4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EXERCÍCIO 04 - LUMINOSIDADE"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+</LinearLayout>

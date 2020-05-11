@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_margin="10dp"
+        android:text="EXERCÍCIO 01" />
+
+    <EditText
+        android:id="@+id/editText_num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ex: 4"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editText_num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Ex: 84"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SOMAR" />
+
+    <TextView
+        android:id="@+id/textView_resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:text="" />
+</LinearLayout>
