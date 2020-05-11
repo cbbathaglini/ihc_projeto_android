@@ -31,7 +31,7 @@
         android:text="EXERCÍCIO 02"
         tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="128dp" />
-
+s
     <Button
         android:id="@+id/button_exercicio3"
         android:layout_width="match_parent"
@@ -47,6 +47,14 @@
         android:text="EXERCÍCIO 04 - LUMINOSIDADE"
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="351dp" />
+    <TextView
+        android:id="@+id/textView_luminosidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:text="E4 - Luminosidade: não tenho aparelho android então só fiz,mas não consegui testar. Não achei a opção de testar no emulador " />
 
     <Button
         android:id="@+id/button_exercicio5"

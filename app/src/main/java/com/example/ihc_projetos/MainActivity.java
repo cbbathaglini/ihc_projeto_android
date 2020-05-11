@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         btn_ex2 = findViewById(R.id.button_exercicio2);
         btn_ex3 = findViewById(R.id.button_exercicio3);
         btn_ex4 = findViewById(R.id.button_exercicio4);
+        btn_ex4.setEnabled(false);
         btn_ex5 = findViewById(R.id.button_exercicio5);
         btn_ex6 = findViewById(R.id.button_exercicio6_GPS);
 
